@@ -1,94 +1,67 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: 'Desenvolvimento'
+description: 'Fluxo para manter e contribuir com o repositório de skills e documentação.'
 ---
 
-<Info>
-  **Prerequisites**:
-  - Node.js version 19 or higher
-  - A docs repository with a `docs.json` file
-</Info>
-
-Follow these steps to install and run Mintlify on your operating system.
+## Fluxo recomendado
 
 <Steps>
-<Step title="Install the Mintlify CLI">
+  <Step title="Clone o repositório">
+
+```bash
+git clone https://github.com/fabricioctelles/skills.git
+cd skills
+```
+
+  </Step>
+  <Step title="Edite ou crie uma skill">
+
+Cada skill fica em `skills/<nome-da-skill>/SKILL.md`.
+
+Inclua:
+<ul>
+  <li>frontmatter com `name` e `description`</li>
+  <li>instruções de workflow</li>
+  <li>exemplos de entrada e saída</li>
+</ul>
+
+  </Step>
+  <Step title="Teste com seu agente">
+
+Execute um prompt real e confirme:
+<ul>
+  <li>se o agente acionou a skill correta</li>
+  <li>se o output está consistente com o objetivo</li>
+</ul>
+
+  </Step>
+</Steps>
+
+## Documentação com Mintlify
+
+Para pré-visualizar esta documentação localmente:
 
 ```bash
 npm i -g mint
-```
-</Step>
-
-<Step title="Preview locally">
-
-Navigate to your docs directory where your `docs.json` file is located, and run the following command:
-
-```bash
 mint dev
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+Por padrão, o preview abre em `http://localhost:3000`.
 
-</Step>
-</Steps>
-
-## Custom ports
-
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. For example, to run Mintlify on port 3333, use this command:
-
-```bash
-mint dev --port 3333
-```
-
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
-
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
-
-## Mintlify versions
-
-Please note that each CLI release is associated with a specific version of Mintlify. If your local preview does not align with the production version, please update the CLI:
-
-```bash
-npm mint update
-```
-
-## Validating links
-
-The CLI can assist with validating links in your documentation. To identify any broken links, use the following command:
+## Validações úteis
 
 ```bash
 mint broken-links
+mint validate
 ```
 
-## Deployment
+## Boas práticas para contribuição
 
-If the deployment is successful, you should see the following:
+- Mantenha cada skill focada em um problema específico.
+- Use linguagem objetiva e comandos reproduzíveis.
+- Atualize exemplos quando APIs ou ferramentas mudarem.
+- Evite duplicar conteúdo entre skills; prefira referências claras.
 
-<Frame>
-  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Code formatting
-
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
-
-## Troubleshooting
-
-<AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of the CLI: `npm remove -g mint`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall the CLI: `npm i -g mint`
-  </Accordion>
-
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the `~/.mintlify` folder. Then run `mint dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in the latest CLI version? Check out the [CLI changelog](https://www.npmjs.com/package/mintlify?activeTab=versions).
+<Info>
+  Antes de publicar mudanças amplas, revise também o `AGENTS.md` para manter alinhamento com o contexto e as regras do projeto.
+</Info>

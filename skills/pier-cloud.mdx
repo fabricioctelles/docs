@@ -1,0 +1,50 @@
+---
+title: "Pier cloud API"
+description: "Skill para autenticação e consumo da API Pier Cloud com scripts prontos."
+---
+
+## Visão geral
+
+A skill `pier-cloud` documenta o uso da API Pier Cloud (Lighthouse), incluindo autenticação JWT, contextos, workspaces e visualizações.
+
+## Pré-requisitos
+
+- arquivo `.env` com credenciais válidas
+- Python 3.7+
+- dependências `requests` e `python-dotenv`
+
+```bash
+pip install requests python-dotenv
+```
+
+## Fluxo básico
+
+<Steps>
+  <Step title="Autentique e obtenha token JWT">
+
+```bash
+python scripts/pier-cloud-auth.py
+```
+
+  </Step>
+  <Step title="Liste contextos e workspaces">
+
+```bash
+python scripts/pier-cloud-list-contexts.py
+python scripts/pier-cloud-list-workspaces.py --page 1 --page-size 20
+```
+
+  </Step>
+  <Step title="Consuma views e dados">
+
+```bash
+python scripts/pier-cloud-list-views.py --workspace-id 16969
+python scripts/pier-cloud-get-view-data.py --view-id 193195
+```
+
+  </Step>
+</Steps>
+
+<Warning>
+  Não prossiga sem o arquivo `.env` no diretório da skill.
+</Warning>

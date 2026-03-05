@@ -1,7 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Agent Skills by ft.ia.br",
+  "description": "Documentação das skills do repositório fabricioctelles/skills para agentes de IA.",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -11,10 +12,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Guias",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Comece aqui",
             "pages": [
               "index",
               "quickstart",
@@ -22,47 +23,28 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Skills",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "skills/index",
+              "skills/premium-proposal-builder",
+              "skills/geo-optimization",
+              "skills/substack-expert",
+              "skills/pier-cloud",
+              "skills/ultimate-design-system-master",
+              "skills/front-end-checklist",
+              "skills/resume-ats-beater"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Referência",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Formato Agent Skills",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "essentials/markdown",
+              "essentials/reusable-snippets"
             ]
           }
         ]
@@ -71,13 +53,13 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Repositório",
+          "href": "https://github.com/fabricioctelles/skills",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "anchor": "Especificação",
+          "href": "https://agentskills.io/specification.md",
           "icon": "newspaper"
         }
       ]
@@ -90,14 +72,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "GitHub",
+        "href": "https://github.com/fabricioctelles/skills"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Instalar skills",
+      "href": "https://skills.sh/docs"
     }
   },
   "contextual": {
@@ -114,9 +96,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/fabricioctelles",
+      "github": "https://github.com/fabricioctelles/skills",
+      "linkedin": "https://linkedin.com/company/ft-ia-br"
     }
   }
 }

@@ -1,97 +1,66 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Agent Skills by ft.ia.br"
+description: "Coleção de skills para agentes de IA com workflows reutilizáveis."
 ---
 
-## Setting up
+A coleção `fabricioctelles/skills` reúne skills para agentes de IA como Claude Code, Cursor, Windsurf e Kiro.
 
-Get your documentation site up and running in minutes.
+Cada skill é um módulo com um arquivo `SKILL.md` que define contexto, regras e fluxo de execução.
 
 <Card
-  title="Start here"
+  title="Comece pela instalação"
   icon="rocket"
   href="/quickstart"
   horizontal
 >
-  Follow our three step quickstart guide.
+  Instale todas as skills ou apenas uma skill específica em poucos comandos.
 </Card>
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
+## Skills disponíveis
 
 <Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+  <Card title="Premium proposal builder" icon="trophy" href="/skills/premium-proposal-builder">
+    Estrutura propostas comerciais premium para website e deck.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="GEO optimization" icon="search" href="/skills/geo-optimization">
+    Otimiza conteúdo para citações em respostas de IA.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Substack expert" icon="newspaper" href="/skills/substack-expert">
+    Cria e otimiza conteúdo para Substack com foco em crescimento.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Pier cloud API" icon="cloud" href="/skills/pier-cloud">
+    Guia de autenticação e consumo da API Pier Cloud para FinOps.
+  </Card>
+  <Card title="Ultimate design system master" icon="palette" href="/skills/ultimate-design-system-master">
+    Gera entregáveis de design com 10 prompts especializados.
+  </Card>
+  <Card title="Front-end checklist" icon="list-checks" href="/skills/front-end-checklist">
+    Checklist completo de front-end para qualidade pré-produção.
+  </Card>
+  <Card title="Resume ATS beater" icon="file-text" href="/skills/resume-ats-beater">
+    Reescreve currículos para ATS e recrutadores no mercado brasileiro.
   </Card>
 </Columns>
 
-## Create beautiful pages
+## Estrutura do repositório
 
-Everything you need to create world-class documentation.
+```text
+skills/
+├── premium-proposal-builder/
+├── geo-optimization/
+├── substack-expert/
+├── pier-cloud/
+├── ultimate-design-system-master/
+├── front-end-checklist/
+└── resume-ats-beater/
+```
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+<Info>
+  O formato Agent Skills é aberto e funciona com múltiplos agentes. Consulte a especificação em [agentskills.io](https://agentskills.io/specification.md).
+</Info>
 
-## Need inspiration?
+## Próximos passos
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+- Abra o guia de instalação em `/quickstart`.
+- Consulte o catálogo completo em `/skills/index`.
+- Escolha a skill certa para o seu caso de uso.
