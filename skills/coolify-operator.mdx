@@ -1,0 +1,83 @@
+---
+title: "Coolify operator"
+description: "Skill para operar instâncias Coolify via API REST e CLI oficial — deploy, monitoramento e gerenciamento de aplicações, servidores e databases."
+---
+
+## Visão geral
+
+A skill `coolify-operator` ensina o agente a operar instâncias [Coolify](https://coolify.io), a plataforma self-hosted open-source alternativa ao Heroku, Vercel e Netlify. Cobre autenticação, deploy, monitoramento e troubleshooting via API REST e CLI oficial.
+
+## Quando usar
+
+- Conectar em instâncias Coolify (API e CLI)
+- Fazer deploy, restart e stop de aplicações
+- Gerenciar variáveis de ambiente
+- Listar servidores e databases
+- Monitorar logs de deployment
+- Gerenciar múltiplos ambientes (dev/staging/prod)
+- Troubleshooting de conexão e autenticação
+
+## Capacidades
+
+<CardGroup cols={2}>
+  <Card title="API REST" icon="code">
+    Operações CRUD completas para applications, servers, databases e services via cURL/Bash.
+  </Card>
+  <Card title="CLI oficial" icon="terminal">
+    Configuração de contextos, deploy e gerenciamento direto pelo terminal.
+  </Card>
+  <Card title="Multi-ambiente" icon="layer-group">
+    Workflows para dev, staging e produção com troca de contexto.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench">
+    Resolução de erros comuns: 403, 401, tokens com pipe e problemas de conexão.
+  </Card>
+</CardGroup>
+
+## Casos de teste incluídos
+
+A skill inclui 8 cenários realistas de avaliação:
+
+1. Configurar contexto inicial com CLI
+2. Listar e reiniciar aplicação
+3. Troubleshooting de erro 403
+4. Deploy multi-ambiente (dev/staging/prod)
+5. Atualizar variáveis de ambiente
+6. Monitorar logs de deploy
+7. Resolver problema de token com pipe (`|`)
+8. Listar e reiniciar databases
+
+## Instalação
+
+```bash
+npx skills add fabricioctelles/skills@coolify-operator
+```
+
+## Exemplos de uso
+
+Peça ao agente coisas como:
+
+```
+"Conecte no meu Coolify e liste as aplicações"
+"Faça deploy da aplicação X no ambiente staging"
+"Reinicie o banco de dados PostgreSQL no Coolify"
+"Mostre os logs do último deploy"
+"Atualize a variável DATABASE_URL na aplicação Y"
+```
+
+## Referências
+
+- [Site oficial do Coolify](https://coolify.io)
+- [Documentação](https://coolify.io/docs)
+- [API Reference](https://coolify.io/docs/api-reference)
+- [CLI no GitHub](https://github.com/coollabsio/coolify-cli)
+
+## Estrutura do skill
+
+```
+coolify-operator/
+├── SKILL.md           # Skill principal com todas as instruções
+├── evals/
+│   └── evals.json     # 8 casos de teste
+└── README.md
+```
